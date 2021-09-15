@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sumit Jain</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!--        <a class="navbar-brand" href="{% url 'sumit' %}" style="padding-left:10rem">-->
+<!--          SJ-->
+<!--        </a>-->
+         <a  href="{% url 'sumit' %}" class="btn btn-primary" style="margin-left:10rem; float:right" >SJ</a>
+<!--        <a aria-current="page" href="/" class="ml-3 my-3 px-2 py-1 rounded text-md text-center inline-block text-white font-bolder tracking-wider mr-3 hover:bg-indigo-600 hover:text-white text-white bg-indigo-400 bg-indigo-600">SJ</a>-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+<!--        <div class="collapse navbar-collapse" id="navbarNav">-->
+<!--          <ul class="navbar-nav">-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="https://github.com/sporkculture">GitHub</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link" href="{% static 'sumit_resume.pdf' %}">Resume</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--            </li> -->
+<!--          </ul>-->
+<!--        </div>-->
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Sumit Jain</h1>
+          <p class="lead text-muted">Software Engineer with the heart of QA</p>
+          <img src="{% static 'sjain.png' %}" height=250/>
+            <p>
+                <a href="{% url 'jobs' %}" class="btn btn-secondary my-2" >Experience</a>
+                <a href="https://www.linkedin.com/in/sumitj/" class="btn btn-secondary my-2" target="_blank" >LinkedIn</a>
+                <a href="https://github.com/SumitJainUTD" class="btn btn-secondary my-2" target="_blank" >GitHub</a>
+                <a class="btn btn-secondary my-2" href="http://algorithms.tutorialhorizon.com/" target="_blank">Blog</a>
+                <a href="mailto:SumitJain0612@gmail.com" class="btn btn-secondary my-2" target="_blank">Email</a>
+<!--                <a class="btn btn-secondary my-2" href="{% static 'sumit_resume.pdf' %}" target="_blank">Resume</a>-->
+                <a class="btn btn-secondary my-2" href="https://app.box.com/s/p236jk6927gcif5zmh685bq4uh9pa891" target="_blank">Resume</a>
+            </p>
+
+
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>

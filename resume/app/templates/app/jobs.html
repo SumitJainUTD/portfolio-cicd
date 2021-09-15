@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sumit Jain</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a  href="{% url 'sumit' %}" class="btn btn-primary" style="margin-left:10rem; float:right" >SJ</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </nav>
+    </header>
+
+    <main role="main">
+
+<!--      <section class="jumbotron text-center">-->
+        <div class="container">
+            <p>
+                <img src="{% static 'sjain.png' %}" height=70 style="float:right"/>
+                <h3 class="jumbotron-heading" style="padding: 10px; color: grey">Work Experience</h3>
+            </p>
+        </div>
+<!--      </section>-->
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+
+            {% for tile in tiles.all %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" src="{{ tile.image.url }}" />
+<!--                  <hr size="1" width="100%" color="grey">-->
+                  <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+                    <div class="lead text-muted" style="text-align:center">
+                        <p class="">{{ tile.title|linebreaks }}</p>
+                    </div>
+<!--&lt;!&ndash;                  <hr size="1" width="100%" color="grey">&ndash;&gt;-->
+<!--                    <div class="" style="text-align:center">-->
+<!--                        <p class="">{{ tile.company|linebreaks }}</p>-->
+<!--                    </div>-->
+                    <div class="card-body">
+                        <p class="card-text">{{ tile.detail|linebreaks }}</p>
+                    </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>

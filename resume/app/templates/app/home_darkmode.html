@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cover Template · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.0rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 868px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'cover.css' %}" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0" href="#">SJ</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+<!--        <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--        <a class="nav-link" href="#">Features</a>-->
+<!--        <a class="nav-link" href="#">Contact</a>-->
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-2">
+    <h1>Sumit Jain</h1>
+    <p class="lead">Software Engineer with the heart of a QA</p>
+    <img src="{% static 'sjain.png' %}" height=300 style="padding: 10px">
+    <p class="lead">
+      <a href="mailto:SumitJain0612@gmail.com" class="btn btn-secondary my-2" style="color: white">Email me</a>
+    </p>
+  </main>
+
+  <main role="main">
+
+      <div class="album py-5 bg-dark">
+        <div class="container">
+
+          <div class="row">
+
+            {% for job in tiles.all %}
+            <div class="col-md-2">
+              <div class="card mb-2 box-shadow">
+<!--                <img class="card-img-top" src="{{ job.image.url }}" />-->
+                <div class="card-body">
+                  <p class="card-text" style="color: black">{{ job.summary }}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+    </main>
+
+<!--      <div class="album py-5 bg-light">-->
+<!--          <div class="container">-->
+
+<!--            <div class="row">-->
+
+<!--              {% for job in jobs.all %}-->
+<!--              <div class="col-md-4">-->
+<!--                <div class="card mb-4 box-shadow">-->
+<!--                  <img class="card-img-top" src="{{ job.image.url }}" />-->
+<!--                  <div class="card-body">-->
+<!--                    <p class="card-text">{{ job.summary }}</p>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                {% endfor %}-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--    </main>-->
+
+
+  <footer class="mt-auto text-white-50">
+
+  </footer>
+</div>
+
+
+    
+  </body>
+</html>
