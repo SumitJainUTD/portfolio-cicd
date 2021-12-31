@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 549210928943.dkr.ecr.us-east-2.amazonaws.com
+  build:
+    commands:
+      - docker build -t sumit-profile:latest .
+      - docker tag sumit-profile:latest 549210928943.dkr.ecr.us-east-2.amazonaws.com/profile:latest
+  post_build:
+    commands:
+      - docker push 549210928943.dkr.ecr.us-east-2.amazonaws.com/profile:latest
+      - printf '[{"name":task-definition-profile,"imageUri":"%s"}]' 549210928943.dkr.ecr.us-east-2.amazonaws.com > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json

@@ -1,0 +1,16 @@
+Make sure aws cli is set up
+
+// log in to ECR
+aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin <account_id>.dkr.ecr.us-east-2.amazonaws.com (ecr url)
+
+// build the docker image
+docker build -t sumit-profile:latest .
+
+(If running from Mac M1)
+docker buildx build --platform=linux/amd64 -t sumit-profile:latest .
+
+// tag the docker image
+docker tag <IMAGE_NAME> <account_id>.dkr.ecr.us-east-2.amazonaws.com <ECR_URL>
+
+// push to ECR
+docker push <account_id>.dkr.ecr.us-east-2.amazonaws.com<ECR_URL>
