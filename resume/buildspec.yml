@@ -11,6 +11,6 @@ phases:
   post_build:
     commands:
       - docker push 549210928943.dkr.ecr.us-east-2.amazonaws.com/profile:latest
-      - printf '[{"name":task-definition-profile,"imageUri":"%s"}]' 549210928943.dkr.ecr.us-east-2.amazonaws.com > imagedefinitions.json
+      - printf '[{"name":"profile-container","imageUri":"%s"}]' 549210928943.dkr.ecr.us-east-2.amazonaws.com/profile:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
