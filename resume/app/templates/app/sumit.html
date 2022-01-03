@@ -71,7 +71,7 @@
           <h1 class="jumbotron-heading">Sumit Jain</h1>
           <p class="lead text-muted">Software Engineer with the heart of a QA</p>
 
-          <img src="{% static 'sjain.png' %}" height=250/>
+          <img src="{% static 'sjain.png' %}" height=225/>
 <!--            <p>-->
 <!--                <a href="{% url 'jobs' %}" class="btn btn-secondary my-2" >Experience</a>-->
 <!--                <a href="https://www.linkedin.com/in/sumitj/" class="btn btn-secondary my-2" target="_blank" >LinkedIn</a>-->
@@ -85,13 +85,10 @@
             </br>
 <!--            <p class="font-weight-light">Skills:</p>-->
             <p>
-             <h5>
-                    skills:
-                </h5>
                 <h5 style="font-weight:normal">
                     {% for skill in skills.all %}
                         <span style="font-weight:normal" class="badge bg-primary text-light">{{ skill.name}}</span>
-                        {% if forloop.counter|divisibleby:6 %}
+                        {% if forloop.counter|divisibleby:8 %}
                             {{ value|linebreaks }}
                         {% endif %}
                     {% endfor %}
@@ -99,9 +96,6 @@
 
             </p>
 
-            <br>
-            <br>
-            <br>
             <br>
                 <h5>
                     this site uses:
