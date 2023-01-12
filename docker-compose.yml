@@ -3,11 +3,11 @@ version: '3.2'
 services:
   portfolio:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python ./resume/manage.py runserver 0.0.0.0:80
 #    command: python manage.py runserver 0.0.0.0:${SERVER_PORT}
     restart: always
     ports:
-      - "8000:8000"
+      - "80:80"
     volumes:
       - .:/code
     networks:
